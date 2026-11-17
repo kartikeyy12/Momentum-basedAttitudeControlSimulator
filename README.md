@@ -4,7 +4,7 @@ EC300 Control Systems, Group 20, NIT Goa
 
 **Team:** Kartikey Tiwari, Kathan Kuchekar, Mayuresh Nalavade
 
-[![Demo video](docs/media/demo_thumbnail.png)](https://drive.google.com/file/d/1wtIBcwjpKxcyAmiBpySV5_8BWWvSLD9M/view?usp=sharing)
+[![Demo video](docs/media/demo_thumbnail.JPG)](https://drive.google.com/file/d/1wtIBcwjpKxcyAmiBpySV5_8BWWvSLD9M/view?usp=sharing)
 
 **Demo video:** [Watch on drive](https://drive.google.com/file/d/1wtIBcwjpKxcyAmiBpySV5_8BWWvSLD9M/view?usp=sharing)
 
@@ -78,20 +78,14 @@ More plots (Bode, root locus, Nyquist, damping effect) are in [`docs/plots/`](do
 | Power | 2 × 18650 (2S) with LM2596 buck converter |
 | Structure | 3D printed in PLA, parametric OpenSCAD |
 
-Full parts list: [`hardware/bom/BOM.csv`](hardware/bom/BOM.csv)
-Wiring: [`hardware/electronics/`](hardware/electronics/)
+
+Wiring: [`hardware/electronics/`]
+<img width="1868" height="1136" alt="adcs1_pin_diagram" src="https://github.com/user-attachments/assets/064150c6-16b8-4464-9491-d12e8646276e" />
+
 
 ### 3D designs
 All mechanical parts are written in OpenSCAD, so every dimension is a
-parameter. Print-ready STL files are in [`hardware/cad/stl/`](hardware/cad/stl/),
-source in [`hardware/cad/scad/`](hardware/cad/scad/).
-
-To regenerate the STLs:
-```bash
-cd hardware/cad
-./export_stl.sh
-```
-Requires [OpenSCAD](https://openscad.org/) on your PATH.
+parameter.
 
 ## Firmware
 Arduino code in [`firmware/adcs1/`](firmware/adcs1/). It reads the MPU-6050,
@@ -106,9 +100,9 @@ are in [`firmware/tests/`](firmware/tests/).
 ## Hardware Results
 | Test | Simulation | Hardware |
 |---|---|---|
-| 10° step, overshoot | 0.0% | YOUR_VALUE |
-| 10° step, settling time | 1.797 s | YOUR_VALUE |
-| Constant disturbance, steady-state error | 5.94° | YOUR_VALUE |
+| 10° step, overshoot | 0.0% | 0.8% |
+| 10° step, settling time | 1.797 s | 2.098s |
+| Constant disturbance, steady-state error | 5.94° | 9.79° |
 
 ## Repo layout
 ```
